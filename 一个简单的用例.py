@@ -14,7 +14,6 @@ def main():
             u2.modify_stock(i, 'del')
 
     # 把雪球自选股添加到同花顺
-    pprint(u1.stocks['code'][::-1])
     for i in u1.stocks['code'][::-1]:
         if bool(re.match(r'(SH|SZ)\d+', i)):
             i = re.sub(r'(SH|SZ)', '', i)
